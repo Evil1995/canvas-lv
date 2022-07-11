@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>test</title>
+		<style>
+			html {
+				height: 100%;
+			}
+			body {
+				height: 100%;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script type="module">
+      import Scene from '/jsm/core/scene.js'
+      import Poly from '/jsm/core/Poly.js'
+      import Vector3 from '/jsm/core/Vector3.js'
+      import Matrix4 from '/jsm/core/Matrix4.js'
+      const canvas=document.getElementById('canvas')
+      canvas.width=window.innerWidth
+      canvas.height=window.innerHeight
+      const scene=new Scene({canvas})
+      const poly=new Poly({
+        strokeStyle:'#000',
+        vertices:[
+          new Vector3(200,200,0),
+          new Vector3(200,300,0),
+          new Vector3(300,300,0),
+        ],
+        matrix:new Matrix4(
+          1,0,0,0,
+          0,1,0,0,
+          0,0,1,0,
+          100,100,0,1,
+        )
+      })
+      scene.add(poly)
+      scene.render()
+    </script>
+    
+	</body>
+</html>
