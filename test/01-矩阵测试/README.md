@@ -1,4 +1,6 @@
 当前可以使用四维矩阵变换图形：
+
+```
 const poly=new Poly({
   strokeStyle:'#000',
   vertices:[
@@ -13,7 +15,7 @@ const poly=new Poly({
     100,100,0,1,
   )
 })
-
+```
 
 接下来要做的：
 
